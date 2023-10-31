@@ -535,6 +535,7 @@ static void terminal_check_cursor(void)
 //   0 if the main loop must exit
 static int terminal_check(VimState *state)
 {
+  do_check_scrollbind(true);
   if (stop_insert_mode) {
     return 0;
   }
